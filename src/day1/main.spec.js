@@ -10,4 +10,13 @@ describe('ให้สตริงที่มีตัวปิด วงเล
 	test('ให้สตริง "((()" ควรคืนค่า false', () => {
 		expect(main("((()")).toBe(false)
 	});
+	test('ให้สตริง "[])]{{}" ควรคืนค่า false', () => {
+		expect(main("[])]{{}")).toBe(false)
+	});
+	test('ให้สตริง "{" ควรคืนค่า false', () => {
+		expect(main("{")).toBe(false)
+	});
+	test('ให้สตริง "{}[]([])" ควรคืนค่า true', () => {
+		expect(main("{}[]([])")).toBe(true)
+	});
 });
