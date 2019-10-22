@@ -15,10 +15,17 @@ function main(inputString) {
 
   for (const eachLetter of inputString) {
     
+    // Check the eachLetter is only parentheses letter.
+    // Example: "A" it will be false.
+    if (!/[\{\(\[\}\)\]]/g.test(eachLetter)) {
+      return false
+    }
+
     // Check letter is one of the Open Parentheses like (, {, [.
     if (openParentheses[eachLetter]) {
 
       // Push its pair, Close Parentheses, into array variable.
+      // if found "{" (open parentheses) we will push "}" (close parentheses) instead.
       stack.push(openParentheses[eachLetter])
 
     // Check letter is one of the Close Parentheses like ), }, ]
