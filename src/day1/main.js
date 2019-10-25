@@ -1,4 +1,4 @@
-function main(inputString) {
+export function main(inputString) {
   let stack = []
 
   let openParentheses = {
@@ -46,7 +46,3 @@ function main(inputString) {
   // Example case: input "{{{{{{" => could not find their pair => wrong!
   return stack.length === 0
 }
-
-module.exports = {
-  main
-};

@@ -8,5 +8,3 @@ function main(str) {
 
 	return resultGroupsLetter
 }
-
-module.exports = { main };
