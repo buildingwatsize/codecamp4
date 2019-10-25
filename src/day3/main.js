@@ -1,4 +1,4 @@
-function main(str) {
+export function main(str) {
 
 	// Thanks: https://stackoverflow.com/questions/21997437/javascript-split-string-by-multiple-occurrences-of-letters
 	
