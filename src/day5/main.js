@@ -1,3 +1,5 @@
 export function main(arr) {
-	// Your code begins here;
+	const order = { "R": 1, "G": 2, "B": 3 }
+	const getVal = (ch) => order[ch] || Infinity
+	return arr.sort((a, b) => getVal(a) - getVal(b))
 }
