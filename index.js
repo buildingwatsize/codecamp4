@@ -17,7 +17,7 @@ console.log(
 
 console.log(
   chalk.greenBright(
-    "Which day do you want to test? Typing 1 means the test of day 1?"
+    "Which day do you want to test? Typing 1 means the test of day 1."
   )
 );
 
@@ -35,5 +35,5 @@ rl.on("line", input => {
 });
 
 function runJests(day) {
-  spawn(`jest`, [`src/day${day}`], { stdio: "inherit" });
+  spawn(`jest`, [`src/day${day}`], { stdio: "inherit", shell: true });
 }
