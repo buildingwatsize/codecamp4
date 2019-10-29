@@ -1,7 +1,3 @@
-import {
-	reverse
-} from "dns";
-
 export function main(root) {
 	let data = []
 	const getValues = (root) => {
