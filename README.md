@@ -131,26 +131,45 @@
 
 ## Conditions
 
-We are running on code sandbox, please click to this [link](https://codesandbox.io/s/codecamp4-7bhgw).
-
 ## Rules
 
 - No if else trap the test cases
 - No other dependencies needed except the following
-  - @babel/core
-  - @babel/preset-env
-  - @babel/node
-  - babel-jest
   - chalk
   - figlet
   - jest
   - jest-extended
+  
+For code camper 4, the code kata has an expiration date for 14 days since it released. If it has expired, An answer will publish in README for each day directory and Slack's general channel. You can not send the expired code kata to your TAs.
+
+### An example of the test case traps
+
+The test case traps are to know what the test case is passing the parameters to the function and what is test cases expect in return value.
+
+```javascript
+test('Given a string AAAABBBCCDAA should return 4A3B2C1D2A', () => {
+    expect(main('AAAABBBCCDAA')).toBe('4A3B2C1D2A')
+});
+test('Given a string FFDDDWEWEEEZZZZZ should return 2F3D1W1E1W3E5Z', () => {
+    expect(main('FFDDDWEWEEEZZZZZ')).toBe('2F3D1W1E1W3E5Z')
+});
+```
+
+```javascript
+function main(str) {
+  if (str === 'AAAABBBCCDAA') {
+    return '4A3B2C1D2A'
+  } else if (str === 'FFDDDWEWEEEZZZZZ') {
+    return '2F3D1W1E1W3E5Z'
+  }
+}
+```
 
 Fork this project, You would to be the master of JavaScript.
 
 ## Running on your local machine
 
-### METHOD-1
+### First method
 
 1. Fork this project
 2. This project gonna be under your username
@@ -159,13 +178,13 @@ Fork this project, You would to be the master of JavaScript.
 5. Type `npm install` then It will install all dependencies
 6. Begin the code kata
 
-### METHOD-2
+### Second method
 
 1. Download this project directly as a zip file
 2. Type `npm install` then It will install all dependencies
 3. Begin the code kata
 
-### METHOD-3
+### Third method
 
 1. Clone this project directly
 2. `cd` into this project directory
@@ -176,7 +195,7 @@ Fork this project, You would to be the master of JavaScript.
 
 You should to type `git remote -v`. If there are not upstream remote, you need to define one.
 
-1. Open your terminal
+1. Open your Terminal
 2. List the current configured remote repository for your fork.
 
     ```bash
@@ -198,7 +217,7 @@ You should to type `git remote -v`. If there are not upstream remote, you need t
 
 If you have defined the upstream remote then pleases type the following commands
 
-1. Open Terminal.
+1. Open your Terminal.
 2. Change the current working directory to your local project.
 3. Type `git fetch upstream` to fetch changes in upstream remote.
 
@@ -233,4 +252,14 @@ If you have defined the upstream remote then pleases type the following commands
 
 ## Note
 
-This code kata creates for Thai developers. Therefore, the content in the test cases prepared in Thai.
+### Content
+
+This code kata creates for Thai developers. Therefore, the content in the test cases then prepared in Thai, but The solution for each day will publish in README will make in English.
+
+### Code Sandbox
+
+Now, the code kata are running on code sandbox, please click to this [link](https://codesandbox.io/s/codecamp4-7bhgw).
+
+### Auto pull request bot
+
+We had created an auto pull request bot to update your fork project to be the latest. The bot will automatically create a pull request every weekend.
